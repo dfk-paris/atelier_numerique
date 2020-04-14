@@ -17,7 +17,7 @@ Recogito (https://recogito.pelagios.org/) is a WebApp for the semantic enrichmen
 
 - The HTML document of the tutorial is created with the GWGD Pad, which is offered as DARIAH-DE service (here CodiMD https://de.dariah.eu/etherpad)
 
-## 2. Atelier numérique I -  Recogito / 2020-04-14
+## 2. Atelier numérique I -  Openrefine / 2020-04-14
 Openrefine (http://openrefine.org/) is a software to clear, filter and enrich tabualr data. Cite Website: "*...a powerful tool for working with messy data: cleaning it; transforming it from one format into another; and extending it with web services and external data..*" 
 
 ### Data and Setup
