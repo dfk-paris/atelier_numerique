@@ -17,7 +17,7 @@ Recogito (https://recogito.pelagios.org/) is a WebApp for the semantic enrichmen
 
 - The HTML document of the tutorial is created with the GWGD Pad, which is offered as DARIAH-DE service (here CodiMD https://de.dariah.eu/etherpad)
 
-## 2. Atelier numérique I -  Openrefine / 2020-04-14
+## 2. Atelier numérique II -  Openrefine / 2020-04-14
 Openrefine (http://openrefine.org/) is a software to clear, filter and enrich tabualr data. Cite Website: "*...a powerful tool for working with messy data: cleaning it; transforming it from one format into another; and extending it with web services and external data..*" 
 
 ### Data and Setup
@@ -29,3 +29,13 @@ Openrefine (http://openrefine.org/) is a software to clear, filter and enrich ta
 
 - The HTML document of the tutorial is created with the GWGD Pad, which is offered as DARIAH-DE service (here CodiMD https://de.dariah.eu/etherpad)
 
+## 3. Atelier numérique III -  SPARQL and Wikidata / 2020-06-09
+Wikidata offers an immense database and is a great place to enrich data for your research. The query service Wikidata is a good starting point for learning SPARQL - a query language that allows you to access huge databases such as Europeana, BNF, DataPersée and many others.
+
+### Data and Setup
+- The tutorial is in english 
+- **Download Tutorial** https://github.com/dfk-paris/atelier_numerique/raw/master/atelier_num_20200512.zip
+or just fork the repo https://github.com/dfk-paris/atelier_numerique/blob/master/SPARQL_Wikidata_20200510.html
+- After Download, please unzip the folder and open the document "SPARQL_Wikidata_20200510.html" with your prefered Browser 
+
+- The HTML document of the tutorial is created with the GWGD Pad, which is offered as DARIAH-DE service (here CodiMD https://de.dariah.eu/etherpad)
