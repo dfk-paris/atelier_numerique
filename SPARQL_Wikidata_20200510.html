@@ -42,8 +42,8 @@ Lizenz: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank
 subject: Fatima     predicate: has birthplace             object: Kairo
 subject: Nina       predicate: is biological parent of    object: Fatima
 subject: Nina       predicate: has Gender                 object: Female
-</code></pre><p>This strucuture allows us to find implicit informations like that Nina stayed at the 26.12.1986 in Kairo, as she gaves birth to her daughter Fatima.<br>
-(<em>Btw. the automatic axtraction of this biographic informations is the main object of the project Cosmotool (<a href="https://cosmotool.de.dariah.eu/cosmotool/personsearch/" target="_blank" rel="noopener">https://cosmotool.de.dariah.eu/cosmotool/personsearch/</a>)</em>).</p><p>This is only a glimpse on a huge topic and we leave it for now. If you continue on your own with the Wikidata Query service, it will help you to have an idea about the structure as you built the questions. So at this point the main take away is: If you can talk SPARQL you can find Data at places like the {Bnf (<a href="https://data.bnf.fr/current/sparql.html" target="_blank" rel="noopener">https://data.bnf.fr/current/sparql.html</a>), Europeana (<a href="https://pro.europeana.eu/page/sparql" target="_blank" rel="noopener">https://pro.europeana.eu/page/sparql</a>) and many more, that offer a SPARQL-endpoit. So far so nice, but it is part of the deal, that it takes some time to get fluent in SPARQL and that you need to know the database to which you are sending your request. Among others Wikidata fortunately offers a GUI (graphical user interface) that allows you to test and explore SPARQL on the immense variety and richness of the Wikidatabase. There is also a mass of SPARQL requests as examples, so there is plenty of material to test.</p><h2 id="Let’s-start"><a class="anchor hidden-xs" href="#Let’s-start" title="Let’s-start"><i class="fa fa-link"></i></a>Let’s start</h2><h3 id="The-first-request-and-some-cat-content"><a class="anchor hidden-xs" href="#The-first-request-and-some-cat-content" title="The-first-request-and-some-cat-content"><i class="fa fa-link"></i></a>The first request (and some cat-content)</h3><p>Let’s jump to the Wikidata Query service <a href="https://query.wikidata.org/" target="_blank" rel="noopener">https://query.wikidata.org/</a></p><p>Here you find under “examples” - at the very top - one that is entitled “cats” and is the first one.</p><h4 id="Voilà-the-first-SPARQL-Query"><a class="anchor hidden-xs" href="#Voilà-the-first-SPARQL-Query" title="Voilà-the-first-SPARQL-Query"><i class="fa fa-link"></i></a>Voilà: the first SPARQL-Query</h4><p>Let’s just run the query by pressing the blue framed button at the left of the main window. Afterwards you will see below a table with 144 items (as of  08/05/2020). You can download this table in several different formats like csv and JSON. You can also click on one of the numbers in the first column.</p><p>As interesting as all this is, we still do not know exactly what this table is about. So let us break down the query.</p><hr><p>#Cats<br>
+</code></pre><p>This structure allows us to find implicit information like that Nina stayed at the 26.12.1986 in Kairo, as she gave birth to her daughter Fatima.<br>
+(<em>Btw. the automatic extraction of this kind of biographic information is the main object of the project Cosmotool (<a href="https://cosmotool.de.dariah.eu/cosmotool/personsearch/" target="_blank" rel="noopener">https://cosmotool.de.dariah.eu/cosmotool/personsearch/</a>)</em>).</p><p>This is only a glimpse on a huge topic and we leave it for now. If you continue on your own with the Wikidata Query service, it will help you to have an idea about the structure as you built the questions. So at this point the main take away is: If you can talk SPARQL you can find Data at places like the {Bnf (<a href="https://data.bnf.fr/current/sparql.html" target="_blank" rel="noopener">https://data.bnf.fr/current/sparql.html</a>), Europeana (<a href="https://pro.europeana.eu/page/sparql" target="_blank" rel="noopener">https://pro.europeana.eu/page/sparql</a>) and many more, that offer a SPARQL-endpoint. So far so nice, but it is part of the deal, that it takes some time to get fluent in SPARQL and that you need to know the database to which you are sending your request. Among others Wikidata fortunately offers a GUI (graphical user interface) that allows you to test and explore SPARQL on the immense variety and richness of the Wikidatabase. There is also a mass of SPARQL requests as examples, so there is plenty of material to test.</p><h2 id="Let’s-start"><a class="anchor hidden-xs" href="#Let’s-start" title="Let’s-start"><i class="fa fa-link"></i></a>Let’s start</h2><h3 id="The-first-request-and-some-cat-content"><a class="anchor hidden-xs" href="#The-first-request-and-some-cat-content" title="The-first-request-and-some-cat-content"><i class="fa fa-link"></i></a>The first request (and some cat-content)</h3><p>Let’s jump to the Wikidata Query service <a href="https://query.wikidata.org/" target="_blank" rel="noopener">https://query.wikidata.org/</a></p><p>Here you find under “examples” - at the very top - one that is entitled “cats” and is the first one.</p><h4 id="Voilà-the-first-SPARQL-Query"><a class="anchor hidden-xs" href="#Voilà-the-first-SPARQL-Query" title="Voilà-the-first-SPARQL-Query"><i class="fa fa-link"></i></a>Voilà: the first SPARQL-Query</h4><p>Let’s just run the query by pressing the blue framed button at the left of the main window. Afterwards you will see below a table with 144 items (as of  08/05/2020). You can download this table in several different formats like csv and JSON. You can also click on one of the numbers in the first column.</p><p>As interesting as all this is, we still do not know exactly what this table is about. So let us break down the query.</p><hr><p>#Cats<br>
 SELECT ?item ?itemLabel<br>
 WHERE<br>
 {<br>
@@ -51,7 +51,7 @@ WHERE<br>
 SERVICE wikibase:label { bd:serviceParam wikibase:language “[AUTO_LANGUAGE],en”. }<br>
 }</p><hr><h4 id="step-by-step"><a class="anchor hidden-xs" href="#step-by-step" title="step-by-step"><i class="fa fa-link"></i></a>step by step</h4><ul>
 <li>
-<p>#Cats This is a just a comment of the one, who provided this question. The machine skips everything that follows the hash (#).<br>
+<p>#Cats Here the one who provided this query added a comment. The machine skips everything that follows the hash (#).<br>
 (<em>Btw. It’s the same how you use &lt;!-- for just another comment --&gt; in HTML.</em>)</p>
 </li>
 <li>
@@ -61,7 +61,7 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language “[AUTO_LANGUAGE],en
 </ul>
 </li>
 <li>
-<p><em><strong>WHERE {</strong></em> This is there the fun starts, as we are describing what kind of items we are looking for and asking for adding ttheir names</p>
+<p><em><strong>WHERE {</strong></em> This is there the fun starts, as we are describing what kind of items we are looking for and asking for adding their names</p>
 <ul>
 <li>
 <p><em><strong>?item wdt:P31 wd:Q146.</strong></em> Now we are asking for items or individuals who are “instances of”(wdt:P31) “house cats” (wd:Q146). Well, this is an important piece to understand. There exist “concepts” and “representatives” of these concepts. Like the concept “continent” and “Asia, Africa, Europe” as some instances or realisations of “continent”. It’s the same with “animal” and “elephant, lion and nemo”. Back to our query, here we are asking: “?item” = <em>give me all the datasets that meets the condition, that they are</em> wdt:P31 <em>an instance of</em> wd:Q146 <em>house cat</em>.</p>
@@ -75,20 +75,20 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language “[AUTO_LANGUAGE],en
 </ul>
 </li>
 </ul><h3 id="Let’s-have-some-more-fun-and-add-some-pics"><a class="anchor hidden-xs" href="#Let’s-have-some-more-fun-and-add-some-pics" title="Let’s-have-some-more-fun-and-add-some-pics"><i class="fa fa-link"></i></a>Let’s have some more fun and add some pics</h3><p>Wouldn’t it be fun to have a look at those cats?<br>
-To add them, firstly we are asking for <em>SELECT ?item ?itemLabel</em> (and new) <em>?itemImage</em>, secondly we add a further constraint: as the ?item should not only be an instance of housecats but the item should have an image (wdt:P18) that goes as <em>?itemImage</em>. The rest stays the same.</p><hr><p>SELECT ?item ?itemLabel ?itemimage<br>
+To add them, first we are asking for <em>SELECT ?item ?itemLabel</em> (and new) <em>?itemImage</em>, secondly we add a constraint: as the ?item should not only be an instance of housecats but the item should have an image (wdt:P18) that goes as <em>?itemImage</em>. The rest stays the same.</p><hr><p>SELECT ?item ?itemLabel ?itemimage<br>
 WHERE<br>
 {<br>
 ?item wdt:P31 wd:Q146.<br>
 ?item wdt:P18 ?itemimage.<br>
 SERVICE wikibase:label { bd:serviceParam wikibase:language “[AUTO_LANGUAGE],en”. }</p><p>}</p><hr><ul>
 <li>
-<p>The resulting table has a third column with image-links. On the left next to the table there is a dropdown menue and you can change from “table” to “image grid” to see the cats (<em>a bit weird actually</em>).</p>
+<p>The resulting table has a third column with image-links. On the left next to the table there is a dropdown menu and you can change from “table” to “image grid” to see the cats (<em>a bit weird actually</em>).</p>
 </li>
 <li>
 <p>Well, here are two more interesting observations.</p>
 <ul>
-<li>The first one is about <strong>properties</strong>. Currently we are asking those items, that are instances of something, to have certain properties. So, let’s think of wine as an instance of beverages and red and white as properties of the item wine. In our cat-content-example some of the items fullfil the property to offer an image. Most of the instances of house cat do not fullfill this, that’s why or list of results is rather short with only 36 results.</li>
-<li>The second observation is less conspicuous. It is about the terms we use to name the outputs. ?item ?item<strong>Label</strong> and ?itemImage are interchangeable. Although not without respecting the dependencies. So you can replace ?item by ?WikidataItem and ?itemImage with ?Pic. Runing this will result in fieldnames of the table, that may be better understandable. Now, you can replace ?itemLabel with ?Name. But after runing this the column will be empty. This is because you broke uninentionally a dependency of of class and instance of and the connection to the SERVICE wikibase:label. Replacing ?Name with WikidataItemLabel will fix the Problem. (<em>And if you want to dig deeper: <a href="https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual#Label_service" target="_blank" rel="noopener">https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual#Label_service</a></em>)</li>
+<li>The first one is about <strong>properties</strong>. Currently we are asking those items, that are instances of something, to have certain properties. So, let’s think of wine as an instance of beverages and red and white as properties of the item wine. In our cat-content-example some of the items fulfil the property to offer an image. Most of the instances of house cat do not fullfill this, that’s why or list of results is rather short with only 36 results.</li>
+<li>The second observation is less conspicuous. It is about the terms we use to name the outputs. ?item ?item<strong>Label</strong> and ?itemImage are interchangeable. Although not without respecting the dependencies. So you can replace ?item by ?WikidataItem and ?itemImage with ?Pic. Runing this will result in fieldnames of the table, that may be better understandable. Now, you can replace ?itemLabel with ?Name. But after runing this the column will be empty. This is because you broke uninentionally a dependency of class and instance of and the connection to the SERVICE wikibase:label. Replacing ?Name with WikidataItemLabel will fix the Problem. (<em>And if you want to dig deeper: <a href="https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual#Label_service" target="_blank" rel="noopener">https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual#Label_service</a></em>)</li>
 </ul>
 </li>
 </ul><hr><p>SELECT ?WikidataElement ?WikidataElementLabel ?Pic<br>
@@ -97,24 +97,24 @@ WHERE<br>
 ?WikidataElement wdt:P31 wd:Q146.<br>
 ?WikidataElement wdt:P18 ?Pic.<br>
 SERVICE wikibase:label { bd:serviceParam wikibase:language “[AUTO_LANGUAGE],en”. }</p><p>}</p><hr><ul>
-<li>What if we want to have all the cats again, and if someone added an image to their Wikidata Element, we would like to have them too. That is easy as we could describe the existence of an image as an optional property. So we just insert: OPTIONAL {?WikidataElement wdt:P18 ?Image.}</li>
+<li>What if we want to have all the cats again, and if someone added an image to their Wikidata Element, we would like to have them too. That is easy as we could describe an image as an optional property. So we just insert: OPTIONAL {?WikidataElement wdt:P18 ?Image.}</li>
 </ul><hr><p>SELECT ?WikidataElement ?WikidataElementLabel ?Pic<br>
 WHERE<br>
 {<br>
 ?WikidataElement wdt:P31 wd:Q146.<br>
 OPTIONAL {?WikidataElement wdt:P18 ?Pic.}</p><p>SERVICE wikibase:label { bd:serviceParam wikibase:language “[AUTO_LANGUAGE],en”. }</p><p>}</p><hr><h3 id="One-more-cat-content-nonsense"><a class="anchor hidden-xs" href="#One-more-cat-content-nonsense" title="One-more-cat-content-nonsense"><i class="fa fa-link"></i></a>One more cat-content nonsense</h3><ul>
 <li>
-<p>Okay, now if you are inclined, we can do one more weird thing, and that is to ask, which of the cats have an own entry at the WorldCat ID.</p>
+<p>Okay, now if you like to, we can do one more weird thing, and that is to ask, which of the cats have an own entry at the WorldCat ID.</p>
 <ul>
-<li>This is again a Property of the item, so we have to ask for a property §. To identify the signifier (numer) of the property, just open Wikidata in a new table and search for WorlCat ID. You may find <a href="https://www.wikidata.org/wiki/Q76630151" target="_blank" rel="noopener">https://www.wikidata.org/wiki/Q76630151</a>. This may look at first glance convincing, but will not work. As Q76630151 covers all IDs of the worldcat, each single ID is something starting with a P as the individual ID again is a property. You will find this within the ontological description of Q76630151 (aka. on the page).</li>
+<li>This is again a Property of the item, so we have to ask for a property §. To find the signifier (numer) of the property, just open Wikidata in a new table and search for WorlCat ID. You may find <a href="https://www.wikidata.org/wiki/Q76630151" target="_blank" rel="noopener">https://www.wikidata.org/wiki/Q76630151</a>. This may look at first glance convincing, but will not work. As Q76630151 covers all IDs of the worldcat, each single ID is something starting with a P as the individual ID again is a property. You will find this within the ontological description of Q76630151 (aka. on the page).</li>
 <li>Insert a phrase above or below the OPTIONAL-constraint. The phrase should follow the example ?WikidataElement wdt:P18 ?Pic, but is not meant as an option but an obligation. Remember to insert a variable (a fieldname) in the SELECT</li>
 </ul>
 </li>
 <li>
 <p>Okay, and if you aren’t fed up with cats, just try to find out which of those WorlCat-cats even have a Twitteraccount (Twitter Username).</p>
 </li>
-</ul><p>Bon chance!</p><h3 id="More-seriuos-stuff"><a class="anchor hidden-xs" href="#More-seriuos-stuff" title="More-seriuos-stuff"><i class="fa fa-link"></i></a>More seriuos stuff</h3><p>Maybe you want to move on to something more serious.</p><ul>
-<li>By this query we are asking for all those places in France, there more than five female writers died. The result should be orderd by the placenames.</li>
+</ul><p>Bon chance!</p><h3 id="More-seriuos-stuff"><a class="anchor hidden-xs" href="#More-seriuos-stuff" title="More-seriuos-stuff"><i class="fa fa-link"></i></a>Some seriuos stuff</h3><p>Maybe you want to move on to something serious.</p><ul>
+<li>By this query we are asking for all those places in France, there more than five female writers died. The result should be ordered by the placename.</li>
 </ul><hr><p>SELECT ?dplace ?dplaceLabel (COUNT (?author) AS ?deaths)<br>
 {<br>
 ?author wdt:P31 wd:Q5.<br>
@@ -127,7 +127,7 @@ GROUP BY ?dplace ?dplaceLabel<br>
 HAVING (?deaths &gt; 5)<br>
 ORDER BY ASC(?dplace)</p><hr><ul>
 <li>
-<p>Try to change this to a less morbid topic and ask the same but in reference to places of birth (as GROUP BY can be tricky, be patient and exact)</p>
+<p>Try to change this to a less morbid topic and ask the same but in reference to places of birth (as GROUP BY is sometimes tricky (from my observations), be patient and exact)</p>
 </li>
 <li>
 <p>Try to get rid of the grouping and instead line up all the writers, with their names and their birthplaces.</p>
