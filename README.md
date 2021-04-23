@@ -22,12 +22,12 @@ Openrefine (http://openrefine.org/) is a software to clear, filter and enrich ta
 
 ### Data and Setup
 - Text in German 
-- **Download Tutorial** & **Testdata** unter https://github.com/dfk-paris/atelier_numerique/raw/master/atelier_num_20200414.zip
+- **Download Tutorial** & **Testdata** unter https://github.com/dfk-paris/atelier_numerique/blob/master/atelier_num_20210423.zip
   - Tutorial: deuxieme atelier numérique chez DFK-Paris.html 
   - Testdata: example_persons.csv example_comments.ods & example_data.csv
 - After Download, please unzip the folder and open the document "deuxieme atelier numérique chez DFK-Paris.html" with your prefered Browser 
 
-- The HTML document of the tutorial is created with the GWGD Pad, which is offered as DARIAH-DE service (here CodiMD https://de.dariah.eu/etherpad)
+- The HTML document of the tutorial is created with the GWGD Pad, which is offered as DARIAH-DE service (here HedgeDoc https://pad.gwdg.de/)
 
 ## 3. Atelier numérique III -  SPARQL and Wikidata / 2020-06-09
 Wikidata offers an immense database and is a great place to enrich data for your research. The query service Wikidata is a good starting point for learning SPARQL - a query language that allows you to access huge databases such as Europeana, BNF, DataPersée and many others.
