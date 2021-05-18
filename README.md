@@ -38,4 +38,4 @@ Wikidata offers an immense database and is a great place to enrich data for your
 or just fork the repo https://github.com/dfk-paris/atelier_numerique/blob/master/SPARQL_Wikidata_20200510.html
 - After Download, please unzip the folder and open the document "SPARQL_Wikidata_20200510.html" with your prefered Browser 
 
-- The HTML document of the tutorial is created with the GWGD Pad, which is offered as DARIAH-DE service (here CodiMD https://de.dariah.eu/etherpad)
+- The HTML document of the tutorial is created with the GWGD Pad, which is offered as DARIAH-DE service (here CodiMD https://de.dariah.eu/etherpad).
